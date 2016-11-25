@@ -1,9 +1,39 @@
+body{
+	background-color: #D5D5D5;
+	overflow-x: hidden; 
+}
+
+
+.heading{
+	margin-left: 25px;
+}
 .producto{
 	display:block;
-	height: 250px;
+	height: 280px;
+
 }
+.producto-title{
+	display:block;
+	height: 30px;
+}
+.producto_wrapper{
+	display: inline-block;
+	height: : 200px;
+	margin: auto;
+	border-radius: 60px 10px 60px 10px;
+	-moz-border-radius: 60px 10px 60px 10px;
+	-webkit-border-radius: 60px 10px 60px 10px;
+	border: 10px inset #7a3d7a;	
+}
+
 .producto-img{
-	
+	display:block;
+	margin:auto;
 	width: 85%;
 	height: 150px;
 }
+
+ps-navbar{
+	margin: 50px 0px;
+}
+
