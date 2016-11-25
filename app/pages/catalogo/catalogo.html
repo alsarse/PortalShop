@@ -1,14 +1,17 @@
 <div>
 <!--https://www.codeofaninja.com/2015/12/angularjs-crud-example-php.html-->
-<h2>SOY EL CATALOGO</h2>
+<h2 class="heading">Catálogo</h2>
 	<ul class="large-block-grid row" ng-init="getAll()">
 		<li  class="col-md-4 producto" ng-repeat="p in productos ">
-
+		<div class="producto_wrapper">
 			<a href="#"><img  class="producto-img" ng-src="{{p.img}}" /></a>
-			<h4 class="producto-title"><a href="#">{{p.name}}</a></h4>
+			<h5 class="producto-title"><a href="#">{{p.name}}</a></h5>
+
 			<div>
-				<p><strong>{{p.price}}</strong></p>
+			<p><strong>{{p.price | currency: "€" : 2}}</strong></p>
 			</div>
+		</div>
+		
 		</li> 
 	</ul>
 </div>

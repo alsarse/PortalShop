@@ -15,15 +15,22 @@ body{
 .producto-title{
 	display:block;
 	height: 30px;
+	border-bottom: 1px solid white;
 }
 .producto_wrapper{
+	background-color: #666;
 	display: inline-block;
 	height: : 200px;
 	margin: auto;
+	padding: 2%;
 	border-radius: 60px 10px 60px 10px;
 	-moz-border-radius: 60px 10px 60px 10px;
 	-webkit-border-radius: 60px 10px 60px 10px;
-	border: 10px inset #7a3d7a;	
+	border: 6px inset #A70A0d;	
+}
+.producto_wrapper a{
+	color: white;
+	text-decoration: none;
 }
 
 .producto-img{
@@ -32,7 +39,10 @@ body{
 	width: 85%;
 	height: 150px;
 }
+strong{
 
+	color:white;
+}
 ps-navbar{
 	margin: 50px 0px;
 }
