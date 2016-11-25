@@ -1,0 +1,9 @@
+.producto{
+	display:block;
+	height: 250px;
+}
+.producto-img{
+	
+	width: 85%;
+	height: 150px;
+}
