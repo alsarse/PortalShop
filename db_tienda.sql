@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2016 a las 19:55:45
+-- Tiempo de generación: 30-11-2016 a las 15:28:12
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.6.15
 
@@ -66,23 +66,23 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`prod_id`, `prod_name`, `prod_price`, `id_categoria`, `tags`, `img_route`) VALUES
-('ACC01', 'Alfombrilla para el ratón de Aguas Estancadas', 18, 'ACC', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_8.png'),
-('ACC02', 'Gorro de Teemo', 20, 'ACC', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/9df78eab33525d08d6e5fb8d27136e95/u/n/untitled_session0943.jpg'),
+('ACC01', 'Alfombrilla para el raton de Aguas Estancadas', 18, 'ACC', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_8.png'),
+('ACC02', 'Gorro de Teemo', 20, 'ACC', '', 'http://gamingparaguay.com/wp-content/uploads/2016/03/teemo-gorro.png'),
 ('ACC03', 'Mochila de LoL: Campeones', 50, 'ACC', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/2/0/2016-08-02-riot-games10807.png'),
 ('ACC04', 'PROYECTO: Pulsera', 10, 'ACC', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_74.png'),
-('ACC05', 'Alfombrilla para el ratón de Freljord', 18, 'ACC', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/f/m/fmousepad.png'),
-('ART01', 'El arte de League of Legends: Volumen I (Edición de coleccionista)', 150, 'ART', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/r/i/riotbook-278.png'),
+('ACC05', 'Alfombrilla para el raton de Freljord', 18, 'ACC', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/f/m/fmousepad.png'),
+('ART01', 'El arte de LoL: Volumen I(Edicion coleccionista)', 150, 'ART', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/r/i/riotbook-278.png'),
 ('ART02', 'El arte de League of Legends: Volumen I ', 75, 'ART', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/r/i/riotbook-246.png'),
-('CAM01', 'PROJECT: Lucian Tee', 20, 'CAM', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/p/r/project_luc_ecomm_1kx1k.png'),
-('CAM02', 'Camiseta esquemática de Heimerdinger ', 20, 'CAM', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/h/e/heim_ecomm_1kx1k.png'),
+('CAM01', 'PROJECTO: Lucian Tee', 20, 'CAM', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/p/r/project_luc_ecomm_1kx1k.png'),
+('CAM02', 'Camiseta esquematica de Heimerdinger ', 20, 'CAM', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/h/e/heim_ecomm_1kx1k.png'),
 ('CAM03', 'Camiseta de deleite lunar (Mujer)', 20, 'CAM', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_58.png'),
 ('CAM04', 'Camiseta El orgullo de Piltover', 20, 'CAM', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/p/i/piltover_s-finest-_m_-28608.png'),
 ('EST01', 'Estatua de Twisted Fate', 250, 'EST', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/t/w/twistedfatefront.png'),
 ('EST02', 'Estatua de Ziggs', 150, 'EST', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/z/i/ziggs_main.png'),
 ('EST3', 'Ashe Unlocked', 85, 'EST', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/a/s/ashe_riot_games-2016-10-26_figures_statues_1508_copy.png'),
-('FIG01', 'Figura de acción de PROYECTO: Fiora', 20, 'FIG', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_83.png'),
+('FIG01', 'Figura de accion de PROYECTO: Fiora', 20, 'FIG', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_83.png'),
 ('FIG02', 'Figura de Riven de campeonato', 20, 'FIG', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/c/h/championship-riven-2_1_2_.png'),
-('FIG03', 'Figura de acción de PROYECTO: Zed', 20, 'FIG', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_86.png'),
+('FIG03', 'Figura de accion de PROYECTO: Zed', 20, 'FIG', 'project', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_86.png'),
 ('JUE01', 'Mechs vs. Minions ', 75, 'JUE', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/m/v/mvm_box_1.png'),
 ('PEL01', 'Peluche de Gnar', 30, 'PEL', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_49.png'),
 ('PEL02', 'Peluche de Teemo Conejo', 25, 'PEL', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/p/l/plush_gray_cottontail_masked.png'),
@@ -92,8 +92,8 @@ INSERT INTO `productos` (`prod_id`, `prod_name`, `prod_price`, `id_categoria`, `
 ('POS01', 'Ahri contra Morgana (68,5 x 101,6 cm)', 15, 'POS', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/i/m/image.png'),
 ('POS02', 'Twisted Fate contra Graves (68,5 x 101,6 cm)', 15, 'POS', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/t/f/tfgraves.png'),
 ('POS03', 'Jinx contra Vi (68,5 x 101,6 cm)', 15, 'POS', '', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/image/570x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_6.png'),
-('SUD01', 'Sudadera con capucha premium fosforescente de Thresh', 80, 'SUD', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/t/h/threshhoodie_unisex_1_2.png'),
-('SUD02', 'Sudadera con capucha premium de League of Legends (Mujer)', 60, 'SUD', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/l/o/lolhoodie_womens_1.png');
+('SUD01', 'Sudadera premium fosforescente de Thresh', 80, 'SUD', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/t/h/threshhoodie_unisex_1_2.png'),
+('SUD02', 'Sudadera premium de League of Legends (Mujer)', 60, 'SUD', 'premium', 'https://euw.merch.riotgames.com/media/catalog/product/cache/71/small_image/325x/9df78eab33525d08d6e5fb8d27136e95/l/o/lolhoodie_womens_1.png');
 
 -- --------------------------------------------------------
 
