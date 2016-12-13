@@ -14,7 +14,7 @@
 	<!--ngInjections-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
 
-	<!--MAIN js -->
+	<!--Modules -->
 	<?php
 		include_once('scripts.php');
 	?>
@@ -26,7 +26,11 @@
 	
 </head>
 <body ng-app="Portalshop">
-
+	<?php
+		 
+		if(isset($_SESSION['user'])){
+			echo $_SESSION['user']; 
+	?>
 	<ps-navbar></ps-navbar>
 	<div class="row">
 		<div ui-view class="col-md-7 col-md-offset-1">
@@ -35,5 +39,13 @@
 	</div>
 	<content-footer></content-footer>
 
+	<?php
+		}else{
+	?>
+			<login-view></login-view>
+
+	<?php
+		}
+	?>
 </body>
 </html>

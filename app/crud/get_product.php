@@ -4,7 +4,7 @@
 	include_once('../objects/database.php');
 	include_once('../objects/productos.php');
 
-	//Instanciar la conexcion con la base de datos. 
+	//Instanciar la conexion con la base de datos. 
 	$database = new Database(); 
 	$db = $database->getConnection();
  

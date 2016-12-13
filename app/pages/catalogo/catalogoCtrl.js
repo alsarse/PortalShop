@@ -6,8 +6,10 @@
 
 	function catalogoCtrl($scope, $http) {
 		$scope.productos= {};
+		
 		$scope.getAll = function(){
-    		$http.get("app/crud/read_productos.php").success(function(response){
+    		$http.get("app/crud/read_productos.php")
+    		.success(function(response){
     			$scope.productos = response.records; 
     			console.log($scope.productos);
     		});

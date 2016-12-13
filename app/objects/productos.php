@@ -46,8 +46,5 @@
 
 		}
 
-		function readBy($tag){
-
-		}
 	}
 ?>

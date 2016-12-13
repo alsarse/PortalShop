@@ -19,13 +19,12 @@
 		//CRUD 
 
 		function validUser(){
-
+			session_start();
 			//Query para loguear un usuario
-			$query = 'select password from '.$this->table_name.' where username = ?';
+			$query = 'select password from '.$this->table_name.' where username ="'.$this->username.'"';
 
 			//Consulta preparada
 			$stmt = $this->con->prepare($query);
-			$stmt->bindParam(1, $this->username);
 			$stmt->execute();
 
 			/*
@@ -36,7 +35,11 @@
 						!= $stmt['password'] ? -> La contraseña es incorrecta; RETURN FALSE
 						 = $stmt['password'] ? -> Login Correcto; RETURN TRUE. 
 			*/	
+			return $stmt; 
+		}
 
+		function logout(){
+			session_destroy(); 
 		}
 
 	}
