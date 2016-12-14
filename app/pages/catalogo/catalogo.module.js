@@ -16,10 +16,7 @@
 				templateUrl: 'app/pages/catalogo/catalogo.html',
 				controller: 'catalogoCtrl'
 			})
-			.state("/catalogo/producto",{
-				url: '/catalogo',
-				templateUrl: 'app/pages/catalogo/catalogoModalView.html'
-			});
+			
 	}
 		
 })();
