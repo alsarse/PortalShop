@@ -5,8 +5,8 @@
 	<ul class="large-block-grid row" ng-init="getAll()">
 		<li  class="col-md-4 producto" ng-repeat="p in productos | filter:search">
 		<div class="producto_wrapper">
-			<a href="#"><img  class="producto-img" ng-src="{{p.img}}" /></a>
-			<h5 class="producto-title"><a href="#">{{p.name}}</a></h5>
+			<a href="#" ng-click="displayModal(p);"><img  class="producto-img" ng-src="{{p.img}}" /></a>
+			<h5 class="producto-title"><a href="#" ng-click="displayModal(p);">{{p.name}}</a></h5>
 
 			<div>
 			<p><strong>{{p.price | currency: "€" : 2}}</strong></p>

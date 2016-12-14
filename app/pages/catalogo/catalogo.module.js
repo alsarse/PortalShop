@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	angular.module('Portalshop.pages.catalogo',['ui.router'])
+	angular.module('Portalshop.pages.catalogo',['ui.router', 'ui.bootstrap'])
 		.config(routeConfig);
 
 	/*---------
@@ -15,6 +15,10 @@
 				url: '/catalogo',
 				templateUrl: 'app/pages/catalogo/catalogo.html',
 				controller: 'catalogoCtrl'
+			})
+			.state("/catalogo/producto",{
+				url: '/catalogo',
+				templateUrl: 'app/pages/catalogo/catalogoModalView.html'
 			});
 	}
 		
