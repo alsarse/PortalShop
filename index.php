@@ -26,24 +26,19 @@
 	
 </head>
 <body ng-app="Portalshop">
-	<?php
-		 
+	<?php		 
 		if(isset($_SESSION['user'])){
-			echo $_SESSION['user']; 
+			
 	?>
-	<ps-navbar></ps-navbar>
-	<div class="row">
-		<div ui-view class="col-md-7 col-md-offset-1">
+		<ps-navbar></ps-navbar>
+		<div class="row">
+			<div ui-view class="col-md-8 col-md-offset-2"></div>
 		</div>
-		<ba-sidebar class="col-md-3"></ba-sidebar>
-	</div>
-	<content-footer></content-footer>
-
+		<content-footer></content-footer>
 	<?php
 		}else{
 	?>
 			<login-view></login-view>
-
 	<?php
 		}
 	?>

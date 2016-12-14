@@ -1,6 +1,9 @@
-<form>
-	<p><label></label><input ng-model="username" type="text" required name="username"/></p>
-	<p><label></label><input ng-model="password" type="password" required name="password"/></p>
-	<p><button name="validate" ng-click="loginUser();">Iniciar sesion</button></p>
+<div class="login-wrapper col-md-offset-4 col-md-4">
+<form id="login" ng-submit="loginUser();">
+	<p><label for="username">Usuario</label><input ng-model="username" type="text" required name="username"/></p>
+	<p><label for="password">Contraseña</label><input ng-model="password" type="password" required name="password"/></p>
+	</br>
+	<p><button name="validate" type="submit">Iniciar sesion</button></p>
 </form>
-	<p>{{error}}</p>
+	<p class="error">{{error}}</p>
+</div>
