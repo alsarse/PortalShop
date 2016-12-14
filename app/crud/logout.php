@@ -16,9 +16,7 @@
 	$user = new Usuario($db);
  
 	// Contraseña del usuario
-	session_start(); 	
-	print_r($_SESSION['user']);
+	session_start(); 			
 	$user->logout(); 
-	print_r($_SESSION['user']);
 
 ?>

@@ -22,6 +22,8 @@
 	<!--STYLES-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css"
 	
 </head>
@@ -32,7 +34,7 @@
 	?>
 		<ps-navbar></ps-navbar>
 		<div class="row">
-			<div ui-view class="col-md-8 col-md-offset-2"></div>
+			<div ui-view class="col-md-10 col-md-offset-1"></div>
 		</div>
 		<content-footer></content-footer>
 	<?php
