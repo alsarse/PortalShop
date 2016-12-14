@@ -9,6 +9,7 @@
 				echo '<script src="app/pages/catalogo/catalogoCtrl.js"></script>';
 			echo '<script src="app/pages/profile/profile.module.js"></script>';
 			echo '<script src="app/pages/cart/cart.module.js"></script>';
+				echo '<script src="app/pages/cart/cartCtrl.js"></script>';
 		echo '<script src="app/components/components.module.js"></script>';
 			echo '<script src="app/components/templates/login/login.module.js"></script>';
 			echo '<script src="app/components/templates/login/loginCtrl.js"></script>';

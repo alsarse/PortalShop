@@ -9,8 +9,8 @@
 		$stateProvider
 			.state("/cesta", {
 				url: '/cesta',
-				templateUrl: 'app/pages/cesta/cesta.html',
+				templateUrl: 'app/pages/cart/cesta.html',
 				controller: 'cartCtrl'
-			});
+			})		
 	}
 })();

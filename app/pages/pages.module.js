@@ -7,6 +7,8 @@
 		'Portalshop.pages.home',
 		'Portalshop.pages.catalogo',
 		'Portalshop.pages.profile',	
+		'Portalshop.pages.cart',
+		
 	])
 		
 		.config(routeConfig);

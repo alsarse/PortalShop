@@ -1,4 +1,4 @@
-<div class="modal-content">
+<div class="modal-content" ng-controller="cartCtrl">
 	<div class="modal-content ng-scope">
 		<div class="modal-header">
 			<button type="button" class="close" ng-click="$dismiss()" aria-label="Close"><em class="ion-ios-close-empty sn-link-close"></em></button>
@@ -10,7 +10,7 @@
 			</div>
 			<div class="col-md-6">
 				<p>Precio por Unidad: {{$resolve.data.price | currency: "€" : 2}}</p>
-				<p><input type="number" step="1" min="1" name="cant"><button type="button" class="btn btn-success" ng-click="addProduct();">Save changes</button></p>
+				<p><input type="number" step="1" min="1" ng-model="cantidad"name="cant"><button type="button" class="btn btn-success" ng-click="cart.push(add($resolve.data));">Save changes</button></p>
 			</div>
 		</div>
 	</div>
