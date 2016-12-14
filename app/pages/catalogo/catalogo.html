@@ -3,7 +3,7 @@
 <div class="col-md-9">
 <h2 class="heading">Catálogo</h2>
 	<ul class="large-block-grid row" ng-init="getAll()">
-		<li  class="col-md-4 producto" ng-repeat="p in productos ">
+		<li  class="col-md-4 producto" ng-repeat="p in productos | filter:search">
 		<div class="producto_wrapper">
 			<a href="#"><img  class="producto-img" ng-src="{{p.img}}" /></a>
 			<h5 class="producto-title"><a href="#">{{p.name}}</a></h5>

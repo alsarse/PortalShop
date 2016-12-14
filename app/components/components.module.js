@@ -20,7 +20,7 @@
 		return{
 			restrict: 'E',
 			templateUrl: "app/components/templates/psNavbar.html",
-			controller: 'loginCtrl'
+			controller: 'catalogoCtrl'
 		}
 	}
 	
