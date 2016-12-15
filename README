@@ -1,0 +1,27 @@
+Portalshop: Documentación sobre el funcionamiento y la estructura de la aplicación.
+	
+	Portalshop se trata de una aplicacion web basada en la arquitectura SPA, construida a partir de AngularJS, siguiendo una estructura modular y diferenciada del código, atendiendo a su funcionalidad y comportamiento dentro de nuestra aplicacion. 
+
+	El fichero 'index.php' situado en el directorio raiz, proporciona el layout necesario para mostrar el contenido de la página, así como la importación de los scripts (CDNs) necesarios para su funcionamiento. Debido a la conexión remota de las librerias utilizadas, es necesario tener conexión a internet para el correcto funcionamiento de la aplicación. 
+
+	El fichero 'scripts.php' del directorio raiz incluye de forma externa en el documento principal todos los ficheros locales creados para gestionar toda la logica de la aplicación. 
+
+	El directorio 'assets' contiene el contenido estético de la aplicación (hojas de estilo css) y distintas imágenes incorporadas. 
+
+	Dentro del directorio 'app' encontramos toda la lógica de la aplicación, estructurada según su funcionalidad. Así encontramos:
+
+		-Components: Contiene las plantillas para el contenido reutilizable a lo largo de todas las vistas de nuestra aplicacion, como la barra de navegación, o el login.
+
+		-CRUD: Contiene todos los ficheros DAO (Data Access Object) .php que serán llamados a través de peticiones AJAX en nuestra aplicacion. 
+
+		-Objects: Ficheros DTO (Data Transfer Objet) .php que gestionan la logica del lado servidor de nuestra aplicacion. Contiene las entidades(tablas) de nuestra base de datos, así como la conexión a la misma. 
+
+		-Pages: Contiene la estructura de las diferentes vistas siguiendo el siguiente esquema: 
+			Un fichero .module.js que instancia un modulo que será el encargado de relacionar la lógica del lado del cliente con la vista.
+
+			Un fichero Ctrl.js que define la lógica y el comportamiento de cada una de las vistas de nuestra aplicacion. 
+
+			Al menos un fichero .html que contendrá la vista de cada página propiamente dicha. 
+
+		El fichero app.js es el encargado de inicializar el funcionamiento de los demás scripts .js de la aplicacion. 
+
