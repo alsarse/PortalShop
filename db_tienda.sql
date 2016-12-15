@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2016 a las 15:28:12
+-- Tiempo de generación: 15-12-2016 a las 07:54:48
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.6.15
 
@@ -45,6 +45,19 @@ INSERT INTO `categorias` (`id_categoria`, `nombre_categoria`) VALUES
 ('PEL', 'Peluches'),
 ('POS', 'Posters'),
 ('SUD', 'Sudaderas');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `historicos`
+--
+
+CREATE TABLE `historicos` (
+  `usuario` varchar(25) NOT NULL,
+  `prod_id` varchar(5) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -122,6 +135,12 @@ INSERT INTO `usuarios` (`username`, `password`) VALUES
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id_categoria`);
+
+--
+-- Indices de la tabla `historicos`
+--
+ALTER TABLE `historicos`
+  ADD PRIMARY KEY (`usuario`,`prod_id`,`fecha`);
 
 --
 -- Indices de la tabla `productos`
