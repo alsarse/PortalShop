@@ -84,11 +84,13 @@ body{
 	height: 150px;
 }
 strong{
-
 	color:white;
 }
 
-
+.old-price {
+	color: red;
+	text-decoration: line-through;
+}
 .modal-img{
 	width: 85%;
 	height: 100% ;

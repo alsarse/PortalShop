@@ -1,4 +1,4 @@
-<toaster-container></toaster-container>
+<toaster-container ></toaster-container>
 <div class="row">
 <!--https://www.codeofaninja.com/2015/12/angularjs-crud-example-php.html-->
 
@@ -10,7 +10,10 @@
 			<h5 class="producto-title"><a href="#" ng-click="displayModal(p);">{{p.name}}</a></h5>
 
 			<div>
-			<p align='center'><strong>{{p.price | currency: "€" : 2}}</strong></p>
+			<p align='center'>
+			<strong ng-if="p.sale==0">{{p.price | currency: "€" : 2}}</strong>
+			<strong ng-if="p.sale!=0">{{p.sale | currency: "€" : 2}}</strong>
+			</p>
 			</div>
 		</div>
 		

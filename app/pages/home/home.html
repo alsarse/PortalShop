@@ -2,10 +2,36 @@
 	<h2>Bienvenido {{user}} </h2>
 	<div class="product-news">
 		<h3>NOVEDADES</h3>
-
+		<ul class="large-block-grid row" ng-init="getAll()">
+		<li class="col-lg-2 producto" ng-repeat="p in news | filter:search">
+		<div class="producto_wrapper">
+			<img  class="producto-img" ng-src="{{p.img}}" />
+			<h5 class="producto-title"><a>{{p.name}}</h5>
+			<div>
+			<p align='center'><strong>{{p.price | currency: "€" : 2}}</strong></p>
+			</div>
+		</div>
+		
+		</li> 
+	</ul>
+	<h3><a href="#" ui-sref="/catalogo">Ir al catálogo...</a></h3>
 	</div>
 
 	<div class="product-sales">
 		<h3>OFERTAS</h3>
+		<ul class="large-block-grid row" ng-init="getAll()">
+		<li class="col-lg-2 producto" ng-repeat="p in sales | filter:search">
+		<div class="producto_wrapper">
+			<a href="#" ng-click="displayModal(p);"><img  class="producto-img" ng-src="{{p.img}}" /></a>
+			<h5 class="producto-title"><a href="#" ng-click="displayModal(p);">{{p.name}}</a></h5>
+
+			<div>
+			<p align='center'><span class="old-price">{{p.price | currency: "€" : 2}} </span><strong>{{p.sale | currency: "€" : 2}}</strong></p>
+			</div>
+		</div>
+		
+		</li> 
+	</ul>
+	<h3><a href="#" ui-sref="/catalogo">Ir al catálogo...</a></h3>
 	</div>
 </div>

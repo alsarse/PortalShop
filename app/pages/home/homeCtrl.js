@@ -13,6 +13,21 @@
 				$scope.user = response;
 			});
 
+		$scope.news= [];
+		$scope.sales= [];
+
+		$http.get('app/crud/read_productos.php')
+			.success(function(response){
+				for(var i=0; i<response.records.length; i++){
+					if(response.records[i].new>0){
+						$scope.news.push(response.records[i]);
+					}
+					if(response.records[i].sale>0){
+						$scope.sales.push(response.records[i]);
+					}
+				}
+			console.log($scope.news);
+		});
 		
 	}
 

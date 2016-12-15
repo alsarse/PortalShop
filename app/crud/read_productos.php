@@ -34,6 +34,8 @@
 	            $data .= '"id":"'  . $prod_id . '",';
 	            $data .= '"name":"' . $prod_name . '",';
 	            $data .= '"price":"' . $prod_price . '",';
+	            $data .= '"new":"' . $is_new . '",';
+	            $data .= '"sale":"' . $is_sale . '",';
 	            $data .= '"img":"'. $img_route .'"';
 	        $data .= '}'; 
 	          

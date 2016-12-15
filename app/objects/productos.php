@@ -10,6 +10,8 @@
 		public $prod_id;
 		public $prod_name;
 		public $prod_price;
+		public $img_route;
+		public $tags; 
 		
 		public function __construct($db){
 			$this->con = $db; 
@@ -20,7 +22,7 @@
 
 		function readAll(){
 			//Query para sacar todos los productos
-			$query = "select prod_id, prod_name, prod_price,img_route from ".$this->table_name."";
+			$query = "select prod_id, prod_name, prod_price, img_route, is_new, is_sale from ".$this->table_name."";
 
 			$stmt = $this->con->prepare($query);
 
