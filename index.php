@@ -13,10 +13,13 @@
 	
 	<!--ngInjections-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap-tpls.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.0/angular-local-storage.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script>
 	<script src="https://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.0/angular-touch.js"></script>
+	
+
 
 	<!--Modules -->
 	<?php include_once('scripts.php'); ?>
