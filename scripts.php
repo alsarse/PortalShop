@@ -13,6 +13,9 @@
 		echo '<script src="app/components/components.module.js"></script>';
 			echo '<script src="app/components/templates/login/login.module.js"></script>';
 			echo '<script src="app/components/templates/login/loginCtrl.js"></script>';
+			echo '<script src="app/components/templates/navbar/navbar.module.js"></script>';
+			echo '<script src="app/components/templates/navbar/navbarCtrl.js"></script>';
+
 
 	//Scripts predefinidos
 ?>

@@ -2,7 +2,8 @@
 	'use strict';
 
 	angular.module('Portalshop.components', [
-		'Portalshop.components.login'
+		'Portalshop.components.login',
+		'Portalshop.components.navbar',
 	])
 	.directive('psNavbar', psNavbar)
 	.directive('loginView', loginView);
@@ -11,8 +12,8 @@
 	function psNavbar(){
 		return{
 			restrict: 'E',
-			templateUrl: "app/components/templates/psNavbar.html",
-			controller: 'catalogoCtrl'
+			templateUrl: "app/components/templates/navbar/psNavbar.html",
+			controller: 'navbarCtrl'
 		}
 	}
 	

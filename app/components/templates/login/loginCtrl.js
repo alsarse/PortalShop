@@ -29,13 +29,6 @@
 				});
 		}
 
-		$scope.logout= function(){
-			$http.get("app/crud/logout.php")
-				.success(function(response){
-					location.reload();
-				});
-		}
-
 	}
 
 })();
