@@ -5,10 +5,11 @@
 	</div>
 	<div >
 		<ul>
-			<li>
-				<p></p>
-				<p></p>	
+			<li ng-repeat = "c in cart">
+				<p>{{c.name}}</p>
+				<p>{{c.uds}} X {{c.price}}</p>	
 			</li>
 		</ul>
+	<button name="empty" ng-click="clean();">Vaciar Cesta</button>
 	</div>
 </div>

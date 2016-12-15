@@ -2,15 +2,15 @@
 	<div class="modal-content ng-scope">
 		<div class="modal-header">
 			<button type="button" class="close" ng-click="$dismiss()" aria-label="Close"><em class="ion-ios-close-empty sn-link-close"></em></button>
-			<h4 class="modal-title">{{$resolve.data.name}}</h4>
+			<h3 class="modal-title">{{$resolve.data.name}}</h3>
 		</div>
 		<div class="modal-body row" >
 			<div class="col-md-6">
-				<img ng-src="{{$resolve.data.img}}" alt={{$resolve.data.name}}/>
+				<h4>{{$resolve.data.price | currency: "€" : 2}}</h4>
+				<img class="modal-img" ng-src="{{$resolve.data.img}}" alt={{$resolve.data.name}}/>
 			</div>
 			<div class="col-md-6">
-				<p>Precio por Unidad: {{$resolve.data.price | currency: "€" : 2}}</p>
-				<p><input type="number" step="1" min="1" ng-model="cantidad"name="cant"><button type="button" class="btn btn-success" ng-click="cart.push(add($resolve.data));">Save changes</button></p>
+					<p><input type="number" step="1" min="1" ng-model="unidades" class="modal-input"><button type="button" class="btn btn-success modal-button" ng-click="add($resolve.data, unidades)">Save changes</button></p>
 			</div>
 		</div>
 	</div>

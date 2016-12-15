@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	angular.module('Portalshop.pages.catalogo',['ui.router', 'ui.bootstrap'])
+	angular.module('Portalshop.pages.catalogo',['ui.router', 'ui.bootstrap','LocalStorageModule'])
 		.config(routeConfig);
 
 	/*---------

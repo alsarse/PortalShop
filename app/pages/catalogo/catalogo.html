@@ -3,13 +3,13 @@
 
 <h2 class="heading">Catálogo</h2>
 	<ul class="large-block-grid row" ng-init="getAll()">
-		<li class="col-md-3 producto" ng-repeat="p in productos | filter:search">
+		<li class="col-lg-2 producto" ng-repeat="p in productos | filter:search">
 		<div class="producto_wrapper">
 			<a href="#" ng-click="displayModal(p);"><img  class="producto-img" ng-src="{{p.img}}" /></a>
 			<h5 class="producto-title"><a href="#" ng-click="displayModal(p);">{{p.name}}</a></h5>
 
 			<div>
-			<p><strong>{{p.price | currency: "€" : 2}}</strong></p>
+			<p align='center'><strong>{{p.price | currency: "€" : 2}}</strong></p>
 			</div>
 		</div>
 		

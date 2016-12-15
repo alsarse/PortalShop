@@ -47,19 +47,22 @@
 
         //PROCESO DE COMPRA: Incluir en cartCtrl ? 
 
-        
-        /*
         $scope.cart = cartService.getCart();
 
-        $scope.producto = {
-            nombre: $scope.$resolve.data.name,
-            price: $scope.$resolve.data.price,
-            cant: $scope.cantidad,
-            img: $scope.$resolve.data.img
+
+        $scope.newCartItem = {};         
+
+        $scope.add= function(producto,ud){
+            this.$dismiss();
+            $scope.newCartItem = producto; 
+            $scope.newCartItem.uds = ud; 
+            
+            cartService.addProducto($scope.newCartItem);
+            $scope.newCartItem= {}; 
+            
+            console.log($scope.cart);
         }
 
-        $scope.add= cartService.addProducto($scope.producto);
-        
         $scope.remove = function(producto){
             $scope.cart = cartService.removeProducto(producto); 
         }
@@ -67,7 +70,7 @@
     	$scope.showData = function(){
     		console.log($scope.cart); 
     	}
-        */
+     
 	}
 
 })();

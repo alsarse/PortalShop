@@ -4,6 +4,7 @@
 	angular.module('Portalshop.pages', [
 		'ui.router',
 		'ui.bootstrap',
+		'LocalStorageModule',
 		'Portalshop.pages.home',
 		'Portalshop.pages.catalogo',
 		'Portalshop.pages.profile',	
@@ -20,24 +21,29 @@
 	ngInject 
 	----------*/
 
-	function cartService(){
+	function cartService(localStorageService){
 		
-		if(!this.cart){
-			this.cart = []; 
+		this.key = 'cesta'
+
+		if(localStorageService.get(this.key)){
+			this.cart = localStorageService.get(this.key);
+		}else{
+			this.cart = [];
 		}
+		
 
 		this.addProducto = function(producto){
-			var newCart =this.cart.push(producto);
-			this.updateCart(newCart);
+			this.cart.push(producto);
+			this.updateCart();
 		}
 
-		this.updateCart = function(cart){
-			this.cart = cart;
+		this.updateCart = function(){
+			localStorageService.set(this.key, this.cart);
 		}
 
 		this.clean = function(){
-			var empty = [];
-			updateCart(empty);
+			this.cart = [];
+			this.updateCart();
 			return this.getCart();
 		}
 
@@ -46,11 +52,10 @@
 		}
 
 		this.removeProducto = function(producto){
-			var removed = this.cart.filter(function(prod){
+			this.cart = this.cart.filter(function(prod){
 				return prod !== producto
 			});
-			this.updateCart(removed);
-
+			this.updateCart();
 			return this.getCart; 
 		}
 

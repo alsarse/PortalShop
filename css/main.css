@@ -29,7 +29,7 @@ body{
 	text-align: center;
 	padding: 3% 6% 9% 6%;
 	background: url('portalshop.png') no-repeat;
-	background-size: 100%;
+	background-size: auto;
 }
 .login-wrapper form{
 	margin-left: 10%;
@@ -53,6 +53,7 @@ body{
 .producto{
 	display:block;
 	height: 280px;
+	
 
 }
 .producto-title{
@@ -88,3 +89,7 @@ strong{
 }
 
 
+.modal-img{
+	width: 85%;
+	height: 100% ;
+}

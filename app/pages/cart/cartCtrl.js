@@ -9,6 +9,9 @@
 		
 		$scope.cart = cartService.getCart();
 
+		$scope.clean = function(){
+			$scope.cart = cartService.clean(); 	
+		}
 
 		
 		console.log($scope.cart);

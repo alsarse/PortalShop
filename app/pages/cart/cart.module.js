@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 
-	angular.module('Portalshop.pages.cart', ['ui.router'])
+	angular.module('Portalshop.pages.cart', ['ui.router', 'LocalStorageModule'])
 		.config(routeConfig);
 
 	
