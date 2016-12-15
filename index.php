@@ -11,8 +11,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	
-	
-	
 	<!--ngInjections-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap-tpls.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
@@ -21,9 +19,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.0/angular-touch.js"></script>
 
 	<!--Modules -->
-	<?php
-		include_once('scripts.php');
-	?>
+	<?php include_once('scripts.php'); ?>
 	
 	<!--STYLES-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
