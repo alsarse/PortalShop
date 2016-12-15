@@ -23,8 +23,9 @@ body{
 --------------*/
 .login-wrapper{
 	height: 400px;
-	margin-top: 200px;
-	border: 1px solid black;
+	margin-top: 150px;
+	border: 3px solid black;
+	border-radius: 10px;
 	text-align: center;
 	padding: 3% 6% 9% 6%;
 	background: url('portalshop.png') no-repeat;
