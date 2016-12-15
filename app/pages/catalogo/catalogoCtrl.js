@@ -5,7 +5,7 @@
 		.controller('catalogoCtrl', catalogoCtrl);
 		
 
-	function catalogoCtrl($scope, $http, $location, $uibModal, cartService) {
+	function catalogoCtrl($scope, $http, $location, $uibModal, cartService,toaster) {
 				
 		//Obtener todos los productos de la DB.
 		$scope.getAll = function(){
@@ -53,6 +53,7 @@
         $scope.newCartItem = {};         
 
         $scope.add= function(producto,ud){
+            $scope.pop(producto.name, ud);
             this.$dismiss();
             $scope.newCartItem = producto; 
             $scope.newCartItem.uds = ud; 
@@ -70,7 +71,13 @@
     	$scope.showData = function(){
     		console.log($scope.cart); 
     	}
-     
+
+
+        //Toaster:
+        $scope.pop = function(title, cant){
+             toaster.pop('success',title, '<p>Se han añadido '+cant+' unidades a la cesta</p>', 3000, 'trustedHtml');
+        }
+  
 	}
 
 })();

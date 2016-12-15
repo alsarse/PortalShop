@@ -5,6 +5,7 @@
 		'ui.router',
 		'ui.bootstrap',
 		'LocalStorageModule',
+		'toaster',
 		'Portalshop.pages.home',
 		'Portalshop.pages.catalogo',
 		'Portalshop.pages.profile',	
