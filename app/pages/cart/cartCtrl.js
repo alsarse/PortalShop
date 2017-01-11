@@ -17,7 +17,7 @@
 		console.log($scope.cart);
 
 		$scope.count= function(){
-			return ($scope.cart.length>0);
+			return ($scope.cart.length==0);
 		}
 
 		

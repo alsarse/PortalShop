@@ -95,3 +95,7 @@ strong{
 	width: 85%;
 	height: 100% ;
 }
+
+.cart-list{
+	list-style-type: none; 
+}

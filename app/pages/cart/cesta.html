@@ -3,13 +3,14 @@
 	<div ng-if="count()" >
 		<p>No has añadido elementos a la cesta. Visita el catálogo</p>
 	</div>
-	<div >
-		<ul>
-			<li ng-repeat = "c in cart">
+	<div>
+		<ul class="cart-list">
+			<li class="cart-product" ng-repeat = "c in cart">
 				<p>{{c.name}}</p>
 				<p>{{c.uds}} X {{c.price}}</p>	
 			</li>
 		</ul>
 	<button name="empty" ng-click="clean();">Vaciar Cesta</button>
+	<button name="buy" ng-click="buy();"> COMPRAR </button>
 	</div>
 </div>
