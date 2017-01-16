@@ -60,6 +60,16 @@
 			return this.getCart; 
 		}
 
+		this.total = function(){
+			console.log("sumando...");
+			var total=0;
+			for(var i=0; i<this.cart.length; i++){
+				total += this.cart[i].price*this.cart[i].uds
+			}
+			console.log('el total es de '+total); 
+			return total; 	
+		}
+
 	}
 
 

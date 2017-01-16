@@ -4,13 +4,26 @@
 		<p>No has añadido elementos a la cesta. Visita el catálogo</p>
 	</div>
 	<div>
-		<ul class="cart-list">
-			<li class="cart-product" ng-repeat = "c in cart">
-				<p>{{c.name}}</p>
-				<p>{{c.uds}} X {{c.price}}</p>	
-			</li>
-		</ul>
+		<table class="cart-table">
+		<thead>
+		<th>ID Producto</th>
+		<th>PRODUCTO</th>
+		<th>Precio</th>
+		<th>Unidades</th>
+		<th>Subtotal</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat ="c in cart">
+			<td> {{c.id}}</td>
+			<td> <img class="cart-img" ng-src="{{c.img}}"/>{{c.name}} </td>
+			<td> {{c.price}}</td>
+			<td> {{c.uds}}</td>
+			<td>{{c.uds * c.price}}</td>
+			</tr>
+		</tbody>
+		</table>
+	<h3>Total fra. = {{total | currency: "€" : 2}} </h3>
 	<button name="empty" ng-click="clean();">Vaciar Cesta</button>
-	<button name="buy" ng-click="buy();"> COMPRAR </button>
+	<button name="buy" ng-click="buyCart();"> COMPRAR </button>
 	</div>
 </div>
