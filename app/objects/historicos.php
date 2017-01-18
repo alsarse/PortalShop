@@ -23,14 +23,14 @@
 
 
 		function compraProducto(){
-			$query ='insert into'.$this->table_name.' values (?,?,?,?,?)';
+			$query ='insert into '.$this->table_name.' values (?,?,?,?,?)';
 
 			$stmt = $this->con->prepare($query);
 			$stmt->bindParam(1, $this->user);
 			$stmt->bindParam(2, $this->prod_id);
 			$stmt->bindParam(3, $this->cantidad);
-			$stmt->bindParam(4, $this->precio);
-			$stmt->bindParam(5, $this->fecha);
+			$stmt->bindParam(4, $this->fecha);
+			$stmt->bindParam(5, $this->precio);
 
 			$stmt->execute();
 

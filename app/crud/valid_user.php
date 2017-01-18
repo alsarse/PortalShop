@@ -26,8 +26,8 @@
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 	
 	if($row['password']== md5($user->password)){
-			$valid = true; 
-			$_SESSION['user'] = $user->username; 
+		$valid = true; 
+		$_SESSION['user'] = $user->username; 
 	}else{
 		$valid= false; 
 	}

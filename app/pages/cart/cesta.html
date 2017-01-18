@@ -1,9 +1,8 @@
 <div>
-	<h2>CESTA</h2>
 	<div ng-if="count()" >
 		<p>No has añadido elementos a la cesta. Visita el catálogo</p>
 	</div>
-	<div>
+	<div ng-if="!count()">
 		<table class="cart-table">
 		<thead>
 		<th>ID Producto</th>

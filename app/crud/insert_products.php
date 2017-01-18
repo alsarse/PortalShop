@@ -2,7 +2,7 @@
 
 	//Cabeceras de recepción y envio de datos 
 	header('Access-Control-Allow-Origin: *');
-	header('Content-Type: application/json; charset="UTF-8"');
+	//header('Content-Type: application/json; charset="UTF-8"');
 
 	//Incluir las DTO y Conexion 
 	include_once('../objects/database.php');
@@ -21,25 +21,29 @@
 	
 	$flag= true; 
 
-	$hist->user = $user.getSesion();
-	$hist->fecha = time();	
+	$sum=0; 
 
-	for($i=0; $i<count($data); i++){
-		$hist->prod_id = $data[i].id;
-		$hist->precio = $data[i].price;
-		$hist->cantidad = $data[i].uds;
+	$hist->user = $user->getSession();
+	$hist->fecha = date("Y-m-d H:i:s");	
+
+	for($i=0; $i<count($data); $i++){
+
+		$hist->prod_id = $data[$i]->id;
+		$hist->precio = $data[$i]->price;
+		$hist->cantidad = $data[$i]->uds;
 
 		$insert= $hist->compraProducto();
-		if(!$insert){
+
+		if(!$insert)
 			$flag=false;
-		}
+
+		$sum++;
 	}
 
+	$response = array(
+	    "insert" =>  $flag,
+	    "total" => $sum
+	);
 
-	print_r(json_encode($flag));
-	
-	
-	//Consultas;
-	
-
+	print_r(json_encode($response));
 ?>

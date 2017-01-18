@@ -17,7 +17,7 @@
 				username: $scope.username,
 				password: $scope.password
 			};
-				
+			console.log(data); 
 			$http.post("app/crud/valid_user.php", data)
 				.success(function(response){
 					console.log(response)

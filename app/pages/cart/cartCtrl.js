@@ -39,15 +39,16 @@
 
 			for (var i=0; i<$scope.cart.length; i++){
 				var inc = {
-					id : $scope.cart[i].id,
-					price : $scope.cart[i].price,
-					uds : $scope.cart[i].uds,
+					'id' : $scope.cart[i].id,
+					'price' : $scope.cart[i].price,
+					'uds' : $scope.cart[i].uds,
 				};
+				
 				data.push(inc);
 			}
 			console.log(data);
 			
-			$http.post("app/crud/insert_products.php", data)
+			$http.post("app/crud/insert_products.php",data)
 				.success(function(response){
 					console.log(response);
 					})
