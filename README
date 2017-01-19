@@ -25,3 +25,19 @@ Portalshop: Documentación sobre el funcionamiento y la estructura de la aplicac
 
 		El fichero app.js es el encargado de inicializar el funcionamiento de los demás scripts .js de la aplicacion. 
 
+		Existen los siguientes errores no controlados y fallos de usabilidad en la aplicacion hasta el momento: 19/01/2017
+
+			-El contenido de la cesta permanece una vez cerrada la sesión. 
+				
+			-No se muestra el histórico de compras realizadas por el usuario.
+
+			-Solo existe un usuario creado en la base de datos.
+
+			-No se contempla el stock de productos en el proceso de compra.
+
+			-No hay una interfaz de usuario superAdmin para la modificacion de datos de la Base de Datos. 
+
+			
+
+
+
