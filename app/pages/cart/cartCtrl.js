@@ -5,7 +5,7 @@
 		.controller('cartCtrl', cartCtrl); 
 
 
-	function cartCtrl($scope ,$rootScope, $http, cartService){
+	function cartCtrl($scope ,$rootScope, $http, $location, cartService){
 		
 		$scope.cart = cartService.getCart();
 
@@ -46,17 +46,21 @@
 				
 				data.push(inc);
 			}
+
 			console.log(data);
 			
 			$http.post("app/crud/insert_products.php",data)
 				.success(function(response){
 					console.log(response);
+					$scope.clean();
+					//AÑADIR TOASTER CON "COMPRA REALIZADA CON EXITO"
+					$location.path('/');
 					})
 				.error(function(err){
 					console.log(err); 
 				});
-				
-			}
+
+		}
 					
 	}
 	

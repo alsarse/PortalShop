@@ -23,7 +23,7 @@
 
 	$sum=0; 
 
-	$hist->user = $user->getSession();
+	$hist->usuario = $user->getSession();
 	$hist->fecha = date("Y-m-d H:i:s");	
 
 	for($i=0; $i<count($data); $i++){

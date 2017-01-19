@@ -1,31 +1,31 @@
 <?php 
-
 	//Cabeceras de recepción y envio de datos 
 	header('Access-Control-Allow-Origin: *');
-	header('Content-Type: application/json; charset="UTF-8"');
+	//header('Content-Type: application/json; charset="UTF-8"');
 
 	//Incluir las DTO y Conexion 
 	include_once('../objects/database.php');
 	include_once('../objects/historicos.php');
+	include_once('../objects/usuarios.php');
 
 	//Instanciar la conexcion con la base de datos.
 	$database = new Database();
 	$db = $database->getConnection(); 
 
 	//Inicializar el objeto; 
+	$cur_user = new Usuario ($db);
 	$hist = new Historico($db);
-	$data = json_decode(file_get_contents("php://input");
 
-	$hist->user = $_SESSION['user']; 
+	$hist->usuario = $cur_user->getSession(); 
 	
 	//Consultas;
 	$response="";
 
 	$stmt = $hist->showAll();
 	$num = $stmt->rowCount();
-	
 
 	//Comprobar si la query devuelve resultados
+
 	if($num>0){
 
 		$x=1;
@@ -33,9 +33,9 @@
 	    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	    
 	        extract($row);
-	          
+	         
 	        $response .= '{';
-	            $response .= '"usuario":"'  . $user . '",';
+	            $response .= '"usuario":"'  . $usuario . '",';
 	            $response .= '"producto":"' . $prod_id . '",';
 	            $response .= '"cantidad":"' . $cantidad . '",';
 	            $response .= '"precio":"' . $precio . '",';
@@ -46,9 +46,6 @@
 
 	}
 	
-
 	//Formato JSON
-
 	echo '{"records" : ['.$response.']}'; 
-
 ?>

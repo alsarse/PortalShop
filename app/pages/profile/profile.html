@@ -1,1 +1,18 @@
-<h2>ESTE ES MI PERFIL</h2>
+<h2>Historial de compras: </h2>
+<div ng-init="getHistorical()">	
+		<table>
+			<thead>
+				<th>ID Producto</th>
+				<th>Unidades</th>
+				<th>Subtotal</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="h in historical">
+				<td> {{h.fecha}}</td>
+				<td> {{h.prodcuto}}</td>
+				<td> {{h.cantidad}} </td>
+				<td> {{c.precio * h.cantidad}}</td>
+				</tr>
+			</tbody>
+		</table>
+</div>

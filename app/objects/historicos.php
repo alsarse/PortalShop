@@ -7,7 +7,7 @@
 
 		//Propiedades del objeto
 
-		public $user;
+		public $usuario;
 		public $prod_id;
 		public $precio; 
 		public $cantidad;
@@ -26,7 +26,7 @@
 			$query ='insert into '.$this->table_name.' values (?,?,?,?,?)';
 
 			$stmt = $this->con->prepare($query);
-			$stmt->bindParam(1, $this->user);
+			$stmt->bindParam(1, $this->usuario);
 			$stmt->bindParam(2, $this->prod_id);
 			$stmt->bindParam(3, $this->cantidad);
 			$stmt->bindParam(4, $this->fecha);
@@ -38,9 +38,11 @@
 		}
 
 		function showAll(){
-			$query = 'select * from'.$this->table_name.'where user="'.$this->user.'" group by'.$this->fecha ;
+			$query = 'select * from ? where usuario=? group by "fecha" ';
 
 			$stmt = $this->con->prepare($query);
+			$stmt->bindParam(1, $this->table_name);
+			$stmt->bindParam(2, $this->usuario);
 
 			$stmt->execute();
 
